@@ -14,8 +14,12 @@ declare module "@tanstack/react-router" {
     router: typeof router;
   }
 }
+const root = document.querySelector("#root");
 
-createRoot(document.getElementById("root")!).render(
+if (!root) {
+  throw new Error("Root");
+}
+createRoot(root).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
