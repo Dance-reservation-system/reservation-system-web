@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint:check": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc -b"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -37,7 +38,6 @@
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
-    "eslint-plugin-unicorn": "^59.0.1",
     "globals": "^16.3.0",
     "prettier": "3.6.2",
     "tw-animate-css": "^1.3.5",
