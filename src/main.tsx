@@ -17,8 +17,9 @@ declare module "@tanstack/react-router" {
 const root = document.querySelector("#root");
 
 if (!root) {
-  throw new Error("Root");
+  throw new Error("Root not found or does not exist");
 }
+
 createRoot(root).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
