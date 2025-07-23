@@ -4,6 +4,8 @@ import tanstackRouter from "@tanstack/router-plugin/vite";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
+const port = Number(process.env.VITE_PORT) || 3000;
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -18,5 +20,8 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+    server: {
+    port,
   },
 });
